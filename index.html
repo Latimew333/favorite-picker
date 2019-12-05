@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="initial-scale=1.0">
-<title>Picker</title>
+<title>King for Another Day Favorites Picker</title>
 <style>
 body {
     background:#FFF;
@@ -206,9 +206,7 @@ button.disabled:hover {
 </style>
 </head>
 <body>
-<h1>Picker</h1>
-
-<p>You can include any content you want here.</p>
+<h1>King for Another Day Favorites Picker</h1>
 
 <div id="container">
 
@@ -219,6 +217,9 @@ button.disabled:hover {
 <p id="buttons"><button id="pick">Pick</button> <button id="pass">Pass</button> <button id="undo">Undo</button> <button id="redo">Redo</button></p>
 </div>
 
+<input type="number" id="min-batch-size">
+<input type="number" id="max-batch-size">	
+	
 <div id="secondary">
 <h2>Found favorites</h2>
 
@@ -428,7 +429,11 @@ var pickerUI = new PickerUI(myPicker, {
         undo: "#undo",
         redo: "#redo",
         evaluating: "#evaluating",
-        favorites: "#favorites"
+        favorites: "#favorites",
+	settings: {
+		minBatchSize: '#min-batch-size',
+		maxBatchSize: '#max-batch-size'
+    	}
     }
 });
 
